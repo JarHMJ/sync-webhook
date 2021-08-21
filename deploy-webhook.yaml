@@ -32,6 +32,7 @@ spec:
             value: "admin"
           - name: REPO_PATH
             value: "/usr/src/repo"
+        command: ["uvicorn", "main:app", "--host", "0.0.0.0"]
         volumeMounts:
         - mountPath: /usr/src/repo
           name: repo
